@@ -36,6 +36,7 @@ h1, h2, h3 {
     font-family: sans-serif;
 }
 
+/*#region Test */
 /* Pseudo-Class Selector 
 ------------------------------ */
 a:link {
@@ -59,6 +60,7 @@ a:hover {
 a:active {
     color: darkorange;
 }
+/* #endregion */
 
 /* Structural Pseudo-Class Selector 
 ------------------------------ */
