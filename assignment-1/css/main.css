@@ -17,9 +17,20 @@ html {
 }
 
 body {
+    /* Scale */
     width: 80%;
-    margin: auto;
-    background-color: rgb(116, 40, 40);
+
+    /* Positioning */
+    margin: 0 auto;
+
+    /* Background */
+    background-image: url("../images/10000-Days-BG.jpg"); /* Obtained from: https://wallpaperaccess.com/tool-eye */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* <- had to look this up https://www.w3schools.com/cssref/pr_background-attachment.php */
+
+    /* Font */
     color: aliceblue;
 }
 /*------------------------------------------------------*/
@@ -28,6 +39,7 @@ body {
 /* #region Header */
 /*------------------------------------------------------*/
 header {
+    /* Font */
     text-align: center;
 }
 /*------------------------------------------------------*/
@@ -41,42 +53,82 @@ main {
     gap: 20px;
 }
 
-section {
-    grid-column: 1;
+section, article, aside { 
+    /* Shared Properties */
     background-color: rgb(0, 0, 0);
-    background-image: url("../images/cropped.gif");
-    height: 1067px;
-    width: 1067px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+}
+/*------------------------------------------------------*/
+/* #endregion Grid Layout */
 
-    /* using a grid within a grid to center the child contents */
+/* #region Section */
+/*------------------------------------------------------*/
+section {
+    /* Scale */
+    height: auto;
+
+    /* Grid Position */
+    grid-column: 1;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section .lyrics-container {
+    /* Scale */
+    min-width: 1000px;
+    min-height: 1000px;
+    
+    /* Background */
+    background-image: url("../images/cropped.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Using Another Grid For Lyrics View Port (Child) */
     display: grid;
     justify-items: center;
 }
 
-.view-port {
+section .lyrics-view-port {
+    /* Scale */
+    width: 500px;
+    max-height: 300px;
+
+    /* Positioning */
     align-self: center;
-    background-color: white;
-    height: 33%;
-    width: 40%;
     overflow-y: scroll;
+
+    /* Background */
+    background-color: white;
+
+    /* Font */
     text-align: center;
     color: black;
-
     font-size: larger;
 }
+/*------------------------------------------------------*/
+/* #endregion Section */
 
+/* #region Article */
+/*------------------------------------------------------*/
 article {
     grid-column: 1;
-    background-color: rgb(0, 0, 0);
-    width: 900px;
-    height: auto;
 }
+/*------------------------------------------------------*/
+/* #endregion Empty */
 
+/* #region Aside*/
+/*------------------------------------------------------*/
 aside {
     grid-column: 2;
     grid-row: 1 / span 2; /* <- had to look this up at https://www.w3schools.com/cssref/pr_grid-row.php */
-    background-color: rgb(0, 0, 0);
-    width: auto;
+}
+
+aside img {
+    width: 70%;
 }
 /*------------------------------------------------------*/
-/* #endregion Grid Layout */
+/* #endregion Empty */
