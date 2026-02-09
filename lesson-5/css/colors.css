@@ -1,11 +1,15 @@
 @charset "utf-8";
-html {
+html 
+{
 	box-sizing: border-box;
-}
-	*, *:before, *:after {
+	}
+	*, *:before, *:after 
+	{
 	box-sizing: inherit;
 }
-html {
+
+html 
+{
 	background: lightgrey url("../images/winter-birch.jpg") no-repeat top left;
 	background-size: cover;	
 	background-attachment: fixed;
@@ -13,42 +17,66 @@ html {
 	font-family: "Century Gothic", Futura, Helvetica, Arial, sans-serif;
 	font-size: 180%;
 }
-body {
+
+body 
+{
 	min-height: 100%;
 	color: white;	
 }
-header {
+
+header 
+{
 	/* STEP 1a: Go to https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool */
 	/* STEP 1b: Select a HUE using the Hue Slider */
 	/* STEP 1c: De-Saturate the colour a bit, reduce the Lightness, and make the colour slightly transparent by adjusting the Alpha. */
 	/* STEP 1d: Copy the resulting RGBa value and replace the background-color below */
-	background-color: black;
+	background-color: #632f5f96;
 	padding: 1% 10%;
+	/* opacity: 0.5; */
 }
-header h1 {
+
+header h1 
+{
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	color: white;
 	/* STEP 3: Soften the <h1> element text using the opacity property */
 
 }
-main {
+
+main 
+{
 	padding: 0 10%;
 }
-main h2 {
-	/* STEP 2: Set the <h2> inside the <main> to the same transparent purple, but use the HSLa colour syntax, instead */
 
+main h2 
+{
+	/* STEP 2: Set the <h2> inside the <main> to the same transparent purple, but use the HSLa colour syntax, instead */
+	color: hsla(217, 38%, 23%, 0.694);
+	/* color: white; */
 	font-size: 500%;
 	margin: 0;	
-	color: white;
+	
 }
-main p {
+
+/* Overwrite if device can handle color space */
+@media (color-gamut: rec2020)
+{
+	main h2 {color: hsl(305 38% 23% / 0.694); } 
+}
+
+main p 
+{
 	margin-top: 0;
 }
-footer {
+
+footer 
+{
 	padding: 0 10%;
 }
-footer p {
+
+footer p 
+{
 	font-size: 60%;
 	/* STEP 4: Set the <footer> element text to the same purple as in step 1 and 2, using a combination of hexadecimal color syntax and opacity. */
 	color: white;
