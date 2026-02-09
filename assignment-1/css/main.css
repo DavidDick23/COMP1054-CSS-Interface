@@ -19,6 +19,7 @@ html {
 body {
     /* Scale */
     width: 80%;
+    max-width: 1800px;
 
     /* Positioning */
     margin: 0 auto;
@@ -45,9 +46,10 @@ header {
 /*------------------------------------------------------*/
 /* #endregion Header */
 
-/* #region Grid Layout */
+/* #region Main and Shared */
 /*------------------------------------------------------*/
 main {
+    /* Grid Layout */
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
@@ -66,14 +68,17 @@ section, article, aside {
 /* #region Section */
 /*------------------------------------------------------*/
 section {
-    /* Scale */
-    height: auto;
-
     /* Grid Position */
     grid-column: 1;
+
+    /* Background */
+    background-image: url("../images/Aenima-Cover.jpg"); /* Obtained from: https://www.reddit.com/r/ToolBand/ */
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 section h2 {
+    /* Font */
     text-align: center;
 }
 
@@ -83,7 +88,7 @@ section .lyrics-container {
     min-height: 1000px;
     
     /* Background */
-    background-image: url("../images/cropped.gif");
+    background-image: url("../images/Cover-Middle.gif");
     background-repeat: no-repeat;
     background-position: center;
     
@@ -100,6 +105,7 @@ section .lyrics-view-port {
     /* Positioning */
     align-self: center;
     overflow-y: scroll;
+    padding-left: 40px;
 
     /* Background */
     background-color: white;
@@ -109,13 +115,22 @@ section .lyrics-view-port {
     color: black;
     font-size: larger;
 }
+
+section a {
+    /* Font */
+    font-size: 2rem;
+}
 /*------------------------------------------------------*/
 /* #endregion Section */
 
 /* #region Article */
 /*------------------------------------------------------*/
 article {
+    /* Grid Position */
     grid-column: 1;
+    
+    /* Scale */
+    max-width: 1200px;
 }
 /*------------------------------------------------------*/
 /* #endregion Empty */
@@ -123,8 +138,12 @@ article {
 /* #region Aside*/
 /*------------------------------------------------------*/
 aside {
+    /* Grid Position */
     grid-column: 2;
     grid-row: 1 / span 2; /* <- had to look this up at https://www.w3schools.com/cssref/pr_grid-row.php */
+
+    max-width: 500px;
+    min-width: fit-content;
 }
 
 aside img {
