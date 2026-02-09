@@ -1,8 +1,60 @@
+/* #region Empty */
+/*------------------------------------------------------*/
+/* Copy And Paste This For Organzing Regions */
+/*------------------------------------------------------*/
+/* #endregion Empty */
+
 /* #region Core */
 /*------------------------------------------------------*/
+@charset "utf-8";
+
 html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 80%;
+    margin: auto;
     background-color: black;
     color: aliceblue;
 }
 /*------------------------------------------------------*/
 /* #endregion Core */
+
+/* #region Header */
+/*------------------------------------------------------*/
+header {
+    text-align: center;
+}
+/*------------------------------------------------------*/
+/* #endregion Header */
+
+/* #region Grid Layout */
+/*------------------------------------------------------*/
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+section {
+    grid-column: 1;
+    background-color: blue;
+}
+
+article {
+    grid-column: 1;
+    background-color: purple;
+}
+
+aside {
+    grid-column: 2;
+    grid-row: 1 / span 2; /* <- had to look this up at https://www.w3schools.com/cssref/pr_grid-row.php */
+    background-color: brown;
+}
+/*------------------------------------------------------*/
+/* #endregion Grid Layout */
