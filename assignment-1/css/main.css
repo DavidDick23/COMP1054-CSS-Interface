@@ -6,7 +6,7 @@ however, I am fine with losing some marks as I am very
 pleased with the results.
 
 The images have been sourced from recreations by fans and
-are their sources cited in the code. I have edited almost all
+their sources cited in the code. I have edited almost all
 images but one.
 
 I am still struggling with responsive layouts and will but
@@ -234,6 +234,19 @@ aside img {
 a {
     /* Font */
     font-size: 2rem;
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: rgb(54, 73, 154);
+}
+
+a:visited {
+    color: rgb(54, 73, 154);
+}
+
+a:hover {
+    color: blueviolet;
 }
 /*------------------------------------------------------*/
 /* #endregion Link */
