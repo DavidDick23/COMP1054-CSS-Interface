@@ -42,7 +42,13 @@ body {
 header {
     /* Font */
     text-align: center;
+    font-size: 3rem;
+
+    /* Positioning */
+    margin: 0%;
+    padding: 0%;
 }
+
 /*------------------------------------------------------*/
 /* #endregion Header */
 
@@ -132,6 +138,20 @@ article {
     /* Scale */
     max-width: 1200px;
 }
+
+article h3 {
+    /* Positioning */
+    margin-top: 0;
+
+    /* Font */
+    font-size: 2rem;
+}
+
+article p {
+    /* Font */
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
 /*------------------------------------------------------*/
 /* #endregion Empty */
 
@@ -156,6 +176,12 @@ aside h3 {
 
     /* Font */
     font-size: 3rem;
+}
+
+aside p {
+    /* Font */
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 aside img {
