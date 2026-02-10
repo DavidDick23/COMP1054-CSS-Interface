@@ -55,11 +55,15 @@ main {
     gap: 20px;
 }
 
-section, article, aside { 
-    /* Shared Properties */
+section, article, aside { /* Shared Properties */
+    /* Background */
     background-color: rgb(0, 0, 0);
+
+    /* Border */
     border: 1px solid gray;
     border-radius: 10px;
+
+    /* Positioning */
     padding: 20px;
 }
 /*------------------------------------------------------*/
@@ -100,12 +104,13 @@ section .lyrics-container {
 section .lyrics-view-port {
     /* Scale */
     width: 500px;
-    max-height: 300px;
+    height: 320px;
 
     /* Positioning */
     align-self: center;
     overflow-y: scroll;
     padding-left: 40px;
+    margin-bottom: 20px;
 
     /* Background */
     background-color: white;
@@ -142,12 +147,29 @@ aside {
     grid-column: 2;
     grid-row: 1 / span 2; /* <- had to look this up at https://www.w3schools.com/cssref/pr_grid-row.php */
 
-    max-width: 500px;
-    min-width: fit-content;
+    /* Scale */
+    width: 475px;
+}
+
+aside h3 {
+    /* Scale */
+    width: 300px;
+
+    /* Positioning */
+    margin-right: auto; /* Ensures element stays on the left */
+    margin-top: 0%;
+
+    /* Font */
+    font-size: 3rem;
 }
 
 aside img {
-    width: 70%;
+    /* Scale */
+    width: 250px;
+
+    /* Positioning */
+    float: right;
+    padding: 0;
 }
 /*------------------------------------------------------*/
-/* #endregion Empty */
+/* #endregion Aside */
