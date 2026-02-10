@@ -120,11 +120,6 @@ section .lyrics-view-port {
     color: black;
     font-size: larger;
 }
-
-section a {
-    /* Font */
-    font-size: 2rem;
-}
 /*------------------------------------------------------*/
 /* #endregion Section */
 
@@ -173,3 +168,12 @@ aside img {
 }
 /*------------------------------------------------------*/
 /* #endregion Aside */
+
+/* #region Link */
+/*------------------------------------------------------*/
+a {
+    /* Font */
+    font-size: 2rem;
+}
+/*------------------------------------------------------*/
+/* #endregion Link */
