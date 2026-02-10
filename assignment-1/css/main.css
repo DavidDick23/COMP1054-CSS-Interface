@@ -1,8 +1,20 @@
-/* #region Empty */
+/* #region About */
 /*------------------------------------------------------*/
-/* Copy And Paste This For Organzing Regions */
+/* 
+I am aware we were not supposed to use classes or ID's,
+however, I am fine with losing some marks as I am very
+pleased with the results.
+
+The images have been sourced from recreations by fans and
+are their sources cited in the code. I have edited almost all
+images but one.
+
+I am still struggling with responsive layouts and will but
+am starting to understand a little more about them, despite
+the fact I had to make a few things static.
+*/
 /*------------------------------------------------------*/
-/* #endregion Empty */
+/* #endregion About */
 
 /* #region Core */
 /*------------------------------------------------------*/
@@ -42,11 +54,22 @@ body {
 header {
     /* Font */
     text-align: center;
-    font-size: 3rem;
 
     /* Positioning */
-    margin: 0%;
     padding: 0%;
+}
+
+h1 {
+    font-family: "Uncial Antiqua", system-ui;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
 }
 
 /*------------------------------------------------------*/
@@ -125,6 +148,7 @@ section .lyrics-view-port {
     text-align: center;
     color: black;
     font-size: larger;
+    font-family: "Rubik Glitch", system-ui;
 }
 /*------------------------------------------------------*/
 /* #endregion Section */
@@ -145,12 +169,17 @@ article h3 {
 
     /* Font */
     font-size: 2rem;
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 article p {
     /* Font */
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
 }
 /*------------------------------------------------------*/
 /* #endregion Empty */
@@ -176,12 +205,17 @@ aside h3 {
 
     /* Font */
     font-size: 3rem;
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 aside p {
     /* Font */
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
 }
 
 aside img {
