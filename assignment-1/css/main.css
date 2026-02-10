@@ -121,7 +121,7 @@ section .lyrics-container {
     min-height: 1000px;
     
     /* Background */
-    background-image: url("../images/Cover-Middle.gif");
+    background-image: url("../images/Cover-Middle.gif"); /* created with https://ezgif.com/ */
     background-repeat: no-repeat;
     background-position: center;
     
