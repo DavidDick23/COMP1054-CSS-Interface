@@ -1,0 +1,192 @@
+/*==============================================================*/
+/* #region Core */
+/*------------------------------------------------------------- */
+@charset "utf-8";
+
+html {
+    box-sizing: border-box;
+}
+
+/* Border Sizing Correction */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    /* positioning */
+    margin: 0 auto;
+
+    /* scale */
+    width: 90%;
+
+    /* background */
+    background-color: white;
+
+    /* font */
+    color: black;
+}
+
+main {
+    /* grid layout */
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 20px;
+
+    /* positioning */
+    margin-top: 0%;
+}
+/*------------------------------------------------------------- */
+/* #endregion Core */
+/*==============================================================*/
+
+/*==============================================================*/
+/* #region Generic Font Styling */
+/*------------------------------------------------------------- */
+h1, h2 {
+    text-transform: lowercase;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+/*------------------------------------------------------------- */
+/* #endregion Generic Font Styling*/
+/*==============================================================*/
+
+/*==============================================================*/
+/* #region Header Section */
+/*------------------------------------------------------------- */
+header {
+    /* flex box layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Date and Issue */
+header p {
+    /* positioning */
+    order: 1;
+    margin-top: 10px;
+    padding-left: 3%;
+
+    /* font */
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    
+}
+
+/* Title */
+header h1 {
+    /* positioning */
+    order: 2;
+    margin-top: 10px;
+    margin-bottom: 0%;
+
+    /* scale */
+    width: 100%;
+
+    /* font */
+    color: orange;
+    font-size: 14rem;
+    font-weight: lighter;
+    transform: scaleX(120%);
+    text-align: center;
+}
+/*------------------------------------------------------------- */
+/* #endregion Header Section */
+/*==============================================================*/
+
+/*==============================================================*/
+/* #region Right Column */
+/*------------------------------------------------------------- */
+aside {
+    /* positioning */
+    grid-column: 1;
+
+    /* font */
+    font-weight: bold;
+}
+
+aside em {
+    /* font */
+    text-transform: uppercase;
+}
+/*------------------------------------------------------------- */
+/* #endregion Right Column */
+/*==============================================================*/
+
+/*==============================================================*/
+/* #region Left Column */
+/*------------------------------------------------------------- */
+main section  {
+    /* positioning */
+    grid-column: 2;
+}
+
+/* First Section h2 */
+main section:first-child {
+    border-top: 20px solid rgb(74, 164, 74);
+}
+
+/* First Section h3 */
+li[value='11'] h3,
+li[value='12'] h3,
+li[value='16'] h3,
+li[value='20'] h3,
+li[value='26'] h3 
+{
+    color: rgb(102, 200, 102);
+}
+
+/* Second Section h2 */
+main section:nth-child(2) {
+    border-top: 20px solid rgb(223, 85, 174);
+}
+
+/* Second Section h3 */
+li[value='31'] h3,
+li[value='32'] h3,
+li[value='36'] h3 
+{
+    color: rgb(230, 113, 189);
+}
+
+/* Third Section h2 */
+main section:nth-child(3) {
+    border-top: 20px solid rgb(63, 59, 187);
+}
+
+/* Third Section h3 */
+li[value='47'] h3,
+li[value='49'] h3,
+li[value='54'] h3,
+li[value='55'] h3,
+li[value='56'] h3,
+li[value='68'] h3,
+li[value='72'] h3,
+li[value='76'] h3 
+{
+    color: rgb(98, 94, 231);
+}
+/*------------------------------------------------------------- */
+/* #endregion Left Column */
+/*==============================================================*/
+
+/*==============================================================*/
+/* #region Footer Section */
+/*------------------------------------------------------------- */
+footer {
+    /* font */
+    text-align: right;
+    font-size: 1.3rem;
+}
+
+footer em {
+    /* font */
+    color: orange;
+}
+/*------------------------------------------------------------- */
+/* #endregion Footer Section */
+/*==============================================================*/
