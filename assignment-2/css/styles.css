@@ -27,7 +27,7 @@ body {
 }
 
 main {
-    /* grid layout */
+    /* layout */
     display: grid;
     grid-template-columns: 1.5fr 2fr;
     gap: 20px;
@@ -40,21 +40,42 @@ main {
 /*==============================================================*/
 
 /*==============================================================*/
-/* #region Generic Font Styling */
+/* #region Generic */
 /*------------------------------------------------------------- */
 h1, h2 {
     text-transform: lowercase;
+    margin: 2px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 100;
 }
 
 h3 {
     text-transform: uppercase;
+    margin: 2px;
+}
+
+h3, p {
+    display: inline; 
+}
+
+li {
+    margin-top: 8px;
+}
+
+/* Line Item Numbering (Pseudo Element) */
+li::marker {
+    content: attr(value) "   "; /* removes the decimal after the number, adds space */
+    font-weight: bold; 
 }
 /*------------------------------------------------------------- */
-/* #endregion Generic Font Styling*/
+/* #endregion Generic */
 /*==============================================================*/
 
 /*==============================================================*/
-/* #region Header Section */
+/* #region Header */
 /*------------------------------------------------------------- */
 header {
     /* flex box layout */
@@ -95,14 +116,14 @@ header h1 {
     text-align: center;
 }
 /*------------------------------------------------------------- */
-/* #endregion Header Section */
+/* #endregion Header */
 /*==============================================================*/
 
 /*==============================================================*/
 /* #region Left Column */
 /*------------------------------------------------------------- */
 aside {
-    /* positioning */
+    /* layout */
     grid-column: 1;
 
     /* font */
@@ -113,21 +134,35 @@ aside em {
     /* font */
     text-transform: uppercase;
 }
+
+main:nth-child(5) {
+    border: 2px solid orange;
+}
 /*------------------------------------------------------------- */
-/* #endregion Left Column */
+/* #endregion Left Column  */
 /*==============================================================*/
 
 /*==============================================================*/
 /* #region Right Column */
 /*------------------------------------------------------------- */
-main section  {
-    /* positioning */
+section  {
+    /* layout */
     grid-column: 2;
 }
 
 /* First Section h2 */
-main section:first-child {
+section:first-child {
     border-top: 20px solid rgb(74, 164, 74);
+}
+
+/* Ordered Lists */
+section ol {
+    padding-left: 80px;
+}
+
+/* Line Item Numbers */
+section ol li::marker {
+    font-size: 1.2rem;
 }
 
 /* First Section h3 */
@@ -175,7 +210,7 @@ li[value='76'] h3
 /*==============================================================*/
 
 /*==============================================================*/
-/* #region Footer Section */
+/* #region Footer */
 /*------------------------------------------------------------- */
 footer {
     /* font */
