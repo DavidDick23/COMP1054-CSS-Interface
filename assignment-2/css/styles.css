@@ -1,4 +1,20 @@
 /*==============================================================*/
+/* #region About */
+/*------------------------------------------------------------- */
+/* 
+    No HTML was harmed in the making of this assignment!
+
+    The reference image was crudley edited by myself in GIMP
+    and then generated through Ai at grok.com using the prompt:
+    "Please clean up this photo by removing the blurriness and 
+    artifacts."
+*/
+/*------------------------------------------------------------- */
+/* #endregion About */
+/*==============================================================*/
+
+
+/*==============================================================*/
 /* #region Core */
 /*------------------------------------------------------------- */
 @charset "utf-8";
@@ -125,9 +141,6 @@ header h1 {
 aside {
     /* layout */
     grid-column: 1;
-
-    /* font */
-    font-weight: bold;
 }
 
 aside em {
@@ -135,8 +148,40 @@ aside em {
     text-transform: uppercase;
 }
 
-main:nth-child(5) {
+aside:nth-of-type(1) {
+    /* border and positioning */
     border: 2px solid orange;
+    padding-left: 20px;
+
+    /* font */
+    font-weight: bold;
+
+    /* drop shadow */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Second Aside */
+aside:nth-of-type(2) {
+    /* border and positioning */
+    border: 2px solid orange;
+    padding-left: 20px;
+
+    /* font */
+    font-weight: bold;
+
+    /* drop shadow */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+figure {
+    position: relative;
+    top:0%;
+}
+
+/* Model Image */
+figure > img {
+    width: 100%;
+    height: auto;
 }
 /*------------------------------------------------------------- */
 /* #endregion Left Column  */
@@ -153,6 +198,7 @@ section  {
 /* First Section h2 */
 section:first-child {
     border-top: 20px solid rgb(74, 164, 74);
+    margin-top: 80px;
 }
 
 /* Ordered Lists */
