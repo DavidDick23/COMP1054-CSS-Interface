@@ -50,26 +50,22 @@ body {
 /*------------------------------------------------------------- */
 main {
     display: grid;
-    grid-template-columns: 450px 1fr; /* Left fixed, right flexible */
+    grid-template-columns: 450px 1fr; /* left fixed, right flexible */
     column-gap: 40px;
-    align-items: start; /* Prevents items from stretching to match row height */
+    align-items: start; /* prevents items from stretching to match row height */
 }
 
 /* Left Column */
 aside {
     grid-column: 1;
+    grid-row: 1;
 }
 
 /* Right Column */
 section {
     grid-column: 2;
+    grid-row: 1;
 }
-
-/* Grid Rows */
-/* painfully had to adjust these values to get my grid to work without gaps caused by the rows */
-aside:nth-of-type(1) { grid-row: 1; }
-section:nth-of-type(1) { grid-row: 1; }
-aside:nth-of-type(2) { grid-row: 2; }
 /*------------------------------------------------------------- */
 /* #endregion Grid Layout */
 /*==============================================================*/
@@ -91,11 +87,6 @@ h3 {
     text-transform: uppercase;
     margin: 2px;
 }
-
-/* section li h3,
-section li p {
-    display: inline-block;
-} */
 
 li {
     margin-top: 8px;
@@ -138,17 +129,15 @@ header p {
 header h1 {
     /* positioning */
     order: 2;
-    margin-top: 10px;
-    margin-bottom: 0%;
-    justify-content: center;
-
-    /* scale */
-    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 8%;
 
     /* font */
-    color: orange;
-    font-size: 12rem;
+    color: #f36b21;
+    font-size: 14rem; 
     font-weight: lighter;
+    line-height: 0.8;
+    text-align: center;
 }
 /*------------------------------------------------------------- */
 /* #endregion Header */
@@ -157,14 +146,17 @@ header h1 {
 /*==============================================================*/
 /* #region Left Column */
 /*------------------------------------------------------------- */
+/* Aside 2 */
+aside:nth-of-type(2) {
+    position: relative;
+    top: 780px;
+    width: 90%;
+    margin-left: 10%;
+}
+
 aside em {
     /* font */
     text-transform: uppercase;
-}
-
-aside:nth-of-type(1) {
-    /* border and positioning */
-    border: 2px solid orange;;
 }
 
 /* Second Aside */
@@ -180,10 +172,17 @@ aside:nth-of-type(2) {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
 }
 
+/* Image Container */
+figure {
+    margin: 0%;
+    padding: 0%;
+}
+
 /* Model Image */
 figure > img {
     width: 100%;
     height: auto;
+    justify-content: center;
 }
 /*------------------------------------------------------------- */
 /* #endregion Left Column  */
@@ -192,6 +191,24 @@ figure > img {
 /*==============================================================*/
 /* #region Right Column */
 /*------------------------------------------------------------- */
+/* Section 2 */
+section:nth-of-type(2) { 
+    position: relative;
+    margin-top: 350px; 
+}
+
+/* Section 3 */
+section:nth-of-type(3) { 
+    position: relative;
+    margin-top: 630px; 
+}
+
+/* Section 4 */
+section:nth-of-type(4) { 
+    position: relative;
+    margin-top: 930px; 
+}
+
 /* First Section h2 */
 main section:nth-of-type(1) {
     border-top: 20px solid rgb(74, 164, 74);
@@ -208,7 +225,7 @@ li[value='26'] h3
 }
 
 /* Second Section h2 */
-main section:nth-child(2) {
+main section:nth-of-type(2) {
     border-top: 20px solid rgb(223, 85, 174);
 }
 
@@ -221,7 +238,7 @@ li[value='36'] h3
 }
 
 /* Third Section h2 */
-main section:nth-child(3) {
+main section:nth-of-type(3) {
     border-top: 20px solid rgb(63, 59, 187);
 }
 
@@ -241,12 +258,21 @@ li[value='76'] h3
 /* Ordered Lists */
 section ol {
     padding-left: 80px;
+    margin-top: 0%;
+    padding-top: 0%;
 }
 
 /* Line Item Numbers */
 section ol li::marker {
     font-size: 1.2rem;
 }
+
+/*  */
+section li h3,
+section li p {
+    display: inline;
+    margin: 0;
+} 
 /*------------------------------------------------------------- */
 /* #endregion Right Column */
 /*==============================================================*/
@@ -258,6 +284,7 @@ footer {
     /* font */
     text-align: right;
     font-size: 1.3rem;
+    margin-top: 20px;
 }
 
 footer em {
