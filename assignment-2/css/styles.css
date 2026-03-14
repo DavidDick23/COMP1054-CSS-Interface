@@ -13,7 +13,6 @@
 /* #endregion About */
 /*==============================================================*/
 
-
 /*==============================================================*/
 /* #region Core */
 /*------------------------------------------------------------- */
@@ -33,26 +32,46 @@ body {
     margin: 0 auto;
 
     /* scale */
-    width: 90%;
+    max-width: 1100px;
 
     /* background */
     background-color: white;
 
     /* font */
     color: black;
-}
-
-main {
-    /* layout */
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: 20px;
-
-    /* positioning */
-    margin-top: 0%;
+    line-height: 1.4;
 }
 /*------------------------------------------------------------- */
 /* #endregion Core */
+/*==============================================================*/
+
+/*==============================================================*/
+/* #region Grid Layout */
+/*------------------------------------------------------------- */
+main {
+    display: grid;
+    grid-template-columns: 450px 1fr; /* Left fixed, right flexible */
+    column-gap: 40px;
+    align-items: start; /* Prevents items from stretching to match row height */
+}
+
+/* Left Column */
+aside {
+    grid-column: 1;
+}
+
+/* Right Column */
+section {
+    grid-column: 2;
+}
+
+/* Grid Rows */
+/* painfully had to adjust these values to get my grid to work without gaps caused by the rows */
+aside:nth-of-type(1) { grid-row: 1; }
+section:nth-of-type(1) { grid-row: 1; }
+aside:nth-of-type(2) { grid-row: 2; }
+/*------------------------------------------------------------- */
+/* #endregion Grid Layout */
 /*==============================================================*/
 
 /*==============================================================*/
@@ -73,9 +92,10 @@ h3 {
     margin: 2px;
 }
 
-h3, p {
-    display: inline; 
-}
+/* section li h3,
+section li p {
+    display: inline-block;
+} */
 
 li {
     margin-top: 8px;
@@ -120,16 +140,15 @@ header h1 {
     order: 2;
     margin-top: 10px;
     margin-bottom: 0%;
+    justify-content: center;
 
     /* scale */
-    width: 100%;
+    width: 90%;
 
     /* font */
     color: orange;
-    font-size: 14rem;
+    font-size: 12rem;
     font-weight: lighter;
-    transform: scaleX(120%);
-    text-align: center;
 }
 /*------------------------------------------------------------- */
 /* #endregion Header */
@@ -138,11 +157,6 @@ header h1 {
 /*==============================================================*/
 /* #region Left Column */
 /*------------------------------------------------------------- */
-aside {
-    /* layout */
-    grid-column: 1;
-}
-
 aside em {
     /* font */
     text-transform: uppercase;
@@ -150,14 +164,7 @@ aside em {
 
 aside:nth-of-type(1) {
     /* border and positioning */
-    border: 2px solid orange;
-    padding-left: 20px;
-
-    /* font */
-    font-weight: bold;
-
-    /* drop shadow */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid orange;;
 }
 
 /* Second Aside */
@@ -173,11 +180,6 @@ aside:nth-of-type(2) {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
 }
 
-figure {
-    position: relative;
-    top:0%;
-}
-
 /* Model Image */
 figure > img {
     width: 100%;
@@ -190,25 +192,9 @@ figure > img {
 /*==============================================================*/
 /* #region Right Column */
 /*------------------------------------------------------------- */
-section  {
-    /* layout */
-    grid-column: 2;
-}
-
 /* First Section h2 */
-section:first-child {
+main section:nth-of-type(1) {
     border-top: 20px solid rgb(74, 164, 74);
-    margin-top: 80px;
-}
-
-/* Ordered Lists */
-section ol {
-    padding-left: 80px;
-}
-
-/* Line Item Numbers */
-section ol li::marker {
-    font-size: 1.2rem;
 }
 
 /* First Section h3 */
@@ -250,6 +236,16 @@ li[value='72'] h3,
 li[value='76'] h3 
 {
     color: rgb(98, 94, 231);
+}
+
+/* Ordered Lists */
+section ol {
+    padding-left: 80px;
+}
+
+/* Line Item Numbers */
+section ol li::marker {
+    font-size: 1.2rem;
 }
 /*------------------------------------------------------------- */
 /* #endregion Right Column */
