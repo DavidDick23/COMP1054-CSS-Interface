@@ -184,6 +184,41 @@ figure > img {
     height: auto;
     justify-content: center;
 }
+
+/* Figure Caption Text */
+figcaption p:nth-of-type(1) {
+    /* postioning */
+    position: absolute;
+    top: 1000px;
+    margin-left: 70px;
+
+    /* font */
+    font-size: 1.2rem;
+    color: white;  
+}
+
+/* Figure Caption Number*/
+figcaption em {
+    /* postioning */
+    position: absolute;
+    top: -130px;
+    
+    /* font */
+    font-size: 7rem;
+}
+
+/* Figure Caption Credit */
+figcaption p:nth-of-type(2) {
+    /* postioning */
+    position: relative;
+    bottom: -330px;
+
+
+    /* font */
+    font-size: 1.2rem;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+}
 /*------------------------------------------------------------- */
 /* #endregion Left Column  */
 /*==============================================================*/
@@ -267,7 +302,7 @@ section ol li::marker {
     font-size: 1.2rem;
 }
 
-/*  */
+/* Line Header and Paragraph */
 section li h3,
 section li p {
     display: inline;
@@ -281,10 +316,12 @@ section li p {
 /* #region Footer */
 /*------------------------------------------------------------- */
 footer {
+    /* positioning */
+    margin-top: 20px;
+
     /* font */
     text-align: right;
     font-size: 1.3rem;
-    margin-top: 20px;
 }
 
 footer em {
