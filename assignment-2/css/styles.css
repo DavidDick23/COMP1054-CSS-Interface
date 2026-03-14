@@ -8,6 +8,11 @@
     and then generated through Ai at grok.com using the prompt:
     "Please clean up this photo by removing the blurriness and 
     artifacts."
+
+    Unfortunately, the layout isn't very responsive as there
+    are absolute values in place. A media query will most likely
+    break this layout This assignment was far more challenging
+    than anticipated.
 */
 /*------------------------------------------------------------- */
 /* #endregion About */
@@ -274,7 +279,7 @@ li[value='36'] h3
 
 /* Third Section h2 */
 main section:nth-of-type(3) {
-    border-top: 20px solid rgb(63, 59, 187);
+    border-top: 20px solid rgb(75, 174, 174);
 }
 
 /* Third Section h3 */
@@ -287,7 +292,7 @@ li[value='68'] h3,
 li[value='72'] h3,
 li[value='76'] h3 
 {
-    color: rgb(98, 94, 231);
+    color: rgb(88, 192, 192);
 }
 
 /* Ordered Lists */
