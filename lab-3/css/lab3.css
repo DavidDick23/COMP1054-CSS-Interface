@@ -82,6 +82,12 @@ a:hover {
 [role="tab"].active a{
 	background-color: white;
 	border: 2px solid black;
+
+	/* This was not included in the submission but it was driving me crazy this morning */
+	/* Fixed the tab bottom border, ran out of time before submission was due */
+	/* IGNORE THIS PLEASE AS IT WAS COMMITTED LATE! */
+	border-bottom: none;
+	height: 104%;
 }
 /* ---------------------------------------------------------------------------------------------------------------- */
 /* #endregion */
