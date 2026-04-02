@@ -1,4 +1,20 @@
 /*================================================================*/
+/* #region About */
+/*----------------------------------------------------------------*/
+/* 
+    I put minimal comments in this lab as I felt most of the code
+    is self explainitory. I also wanted to point out that I simply
+    copied the js folder from today's lesson and placed it in this
+    lab to have it's functionality.
+
+    Ensured Tristen Brown got his credit in the HTML portion.
+        - Rightfully so I must say! 
+*/
+/*----------------------------------------------------------------*/
+/* #endregion */
+/*================================================================*/
+
+/*================================================================*/
 /* #region Core */
 /*----------------------------------------------------------------*/
 @charset "utf-8";
@@ -35,6 +51,7 @@ footer {
 /* #region Table */
 /*----------------------------------------------------------------*/
 table {
+    /* collapse the borders to prevent strange spacing between cells */
     border-collapse: collapse;
     width: 100%;
     table-layout: auto;
@@ -54,15 +71,20 @@ th, td {
     
 }
 
-
+/* target all odd table row,
+ add a light grey background (alternating pattern */
 tbody tr:nth-child(odd) {
     background-color: rgb(0, 0, 0, 0.05);
 }
 
+/* target the first table data child (rank) in every row,
+make it a light blue */
 tbody tr td:nth-child(1) {
     background-color: lightblue;
 }
 
+/* target the first child in the table header (rank),
+make it a light blue */
 thead th:nth-child(1) {
     background-color: lightblue;
 }
