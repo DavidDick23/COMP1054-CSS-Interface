@@ -1,0 +1,76 @@
+/*================================================================*/
+/* #region Core */
+/*----------------------------------------------------------------*/
+@charset "utf-8";
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    
+    width: 70%;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+footer {
+    padding: 1em 2em;
+}
+/*----------------------------------------------------------------*/
+/* #endregion */
+/*================================================================*/
+
+/*================================================================*/
+/* #region Table */
+/*----------------------------------------------------------------*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+    padding: 0;
+    margin: 0 auto;
+}
+
+caption {
+    font-size: 1.8rem;
+    padding-bottom: 0.5em;
+}
+
+th, td {
+    border-top: 1px  solid #666;
+    border-bottom: 1px  solid #666;
+    padding: 0.5em 0;
+    
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(0, 0, 0, 0.05);
+}
+
+tbody tr td:nth-child(1) {
+    background-color: lightblue;
+}
+
+thead th:nth-child(1) {
+    background-color: lightblue;
+}
+
+tfoot tr td {
+    padding: 1em;
+}
+/*----------------------------------------------------------------*/
+/* #endregion */
+/*================================================================*/
+
